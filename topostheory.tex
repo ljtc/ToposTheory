@@ -1,0 +1,61 @@
+\documentclass[11pt]{memoir}
+\usepackage[spanish, mexico, es-noindentfirst]{babel}
+\usepackage{mycats}
+\usepackage[predefined={parent=chapter}]{keytheorems}
+\usepackage[style=authoryear,giveninits=true]{biblatex}
+\usepackage[style=mexican]{csquotes}
+\usepackage[tracking=true,protrusion=true]{microtype}
+
+\usepackage[colorlinks]{hyperref}
+
+%bibliografía
+\addbibresource{tt.bib}
+
+%glosarios
+\let\printindex\relax
+\usepackage[symbols,index,abbreviations,automake]{glossaries-extra}
+\newglossary*{nom}{Lista de Nombres}
+\makeglossaries
+\loadglsentries{gloss}
+
+%geometría de la página
+\settypeblocksize{196.85mm}{33pc}{*}
+\setulmargins{4cm}{*}{*}
+\setlrmargins{31.75mm}{*}{*}
+\setmarginnotes{17pt}{86pt}{\onelineskip}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout
+
+%fuentes
+\setmainfont{Stix Two Text}
+\setmathfont{Stix Two Math}
+
+%punta de las flechas
+\tikzcdset{arrow style=math font}
+\tikzcdset{every arrow/.append style={line width=0.068em}}%ancho
+\pgfmathdeclarefunction*{axis_height}{0}{%
+    \begingroup%      
+      \pgfmathreturn0.259em % línea de base
+    \endgroup}% 
+
+%para recordar pendientes
+\newcommand{\pend}[1]{{\color{red!70}#1}}
+
+\begin{document}
+\frontmatter
+\tableofcontents*
+
+\mainmatter
+\include{introduccion}
+
+\backmatter
+%Impresión de glosarios
+\printindex[title=Índice de términos]
+\printsymbols[title=Lista de símbolos]
+\printabbreviations[title=Acrónimos]
+\printglossary[type=nom]
+
+%impresión de bibliografías
+
+\end{document}

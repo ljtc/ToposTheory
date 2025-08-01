@@ -1,0 +1,93 @@
+\chapter{Introducción}
+\label{chap:intro}
+
+La teoría de topos tiene sus orígenes en dos líneas separadas del desarrollo
+matemático, las cuales permanecieron separadas durante diez años. Para tener una
+apreciación balanceada de la importancia del tema, creo necesario
+considerar la historia de estas dos líneas, y entender porque se unieron cuando
+lo hicieron. Por lo tanto, inicio esta introducción con un pasaje histórico
+(personal, y sin duda muy sesgado).
+
+La primera de las dos líneas comienza con el surgimiento de la \emph{teoría de
+gavillas}, originada en 1945 por J. Leray, desarrollada por H. Cartan y A. Weil
+entre otros, y culminando en el trabajo publicado por J. P. Serre \pend{[107]}, 
+A. Grothendieck \pend{[42]} y R. Godement \pend{[TF]}. Como una buena parte del
+álgebra homológica, la teoría de gavillas originalmente fue concebida como una
+herramienta para la topología algebraica, para axiomatizar la noción de
+\enquote{sistema local de coeficientes} el cual era esencial para una buena
+teoría de cohomología de espacios que no son simplemente conexos; y el título
+completo del libro de Godement índica que aún era vista así en 1958. Sin
+embargo, antes de esta fecha, la potencia de la teoría de gavillas había sido
+reconocida por geómetras algebraicos y analíticos; y en años más recientes, su
+influencia se ha extendido a muchas otras áreas de las matemáticas. (Para tener
+dos ejemplos bastante diferentes ver \pend{[49]} y \pend{[106]}.)
+
+Sin embargo, en geometría algebraica fue descubierto rápidamente que la noción
+topológica de gavilla no era del todo adecuada, ya que la única topología
+disponible en variedades algebraicas abstractas o esquemas, la topología Zariski,
+no tenía \enquote{suficientes abiertos} para proveer de una buena noción
+geométrica de localización. En su trabajo sobre técnicas de descenso
+\pend{[43]} y el grupo fundamental étale \pend{[44]}, A. Grothendieck observó
+que reemplazar \enquote{inclusión abierta de Zariski} por \enquote{morfismo
+étale} era un paso en la dirección correcta; pero desafortunadamente los
+esquemas que son étale sobre un esquema dado en general no forman un conjunto
+parcialmente ordenado. Fue entonces necesario inventar la noción de
+\enquote{topología de Grothendieck} sobre una categoría arbitraria, y la noción
+generalizada de gavilla para tal topología para dar un marco para el desarrollo
+de la cohomología étale.
+
+Este marco fue construido durante el \enquote{Seminaire de Géométrie Algébrique
+du Bois Marie} durante 1963--64 por Grothendieck con la asistencia de M. Artin,
+J. Giraud, J. L. Verdier, y otros. (Las actas de este seminario fueron
+publicadas en una versión muy alargada \pend{[GV]}, incluyendo algunos
+resultados notables de P. Deligne, ocho años después.) Entre los resultados más
+importantes del seminario original fue el teorema de Giraud, que muestra que las
+categorías de gavillas generalizadas que surgen de esta manera pueden ser
+completamente caracterizadas por propiedades de exactitud y condiciones de
+tamaño; a la vista de este resultado, rápidamente se hizo evidente que estas
+categorías de gavillas eran un tema de estudio más importante que los sitios (=
+categorías + topologías) que les dan origen. A la vista de esto y dado que una
+categoría con una topología puede ser vista como un \enquote{espacio topológico
+generalizado}, el (ligeramente desafortunado) nombre de \emph{topos} fue dado a
+las categorías que satisfacen los axiomas de Giraud.
+
+No obstante, los topos seguían considerándose como vehículos primarios para
+acarrear teorías de cohomología; no sólo cohomología étale, sino también la
+\enquote{fppf}, cohomologías cristalinas, entre otras. La potencia de la
+maquinaria desarrollada por Grothendieck fue ampliamente demostrada por los
+sustanciales resultados geométricos obtenidos usando estas teorías de
+cohomología en los años siguientes, culminando en la demostración de P. Deligne
+\pend{[149]} de las famosas \enquote{conjeturas de Weil} ---el análogo \(\mod p\) de
+la hipótesis de Riemann---. La maquinaria en sí fue desarrollada aún más, por
+ejemplo en el trabajo de J. Giraud \pend{[38]} en cohomología no abeliana. Pero
+el significado completo de la sentencia \enquote{el topos es más importante que
+el sitio} parece que nunca fue apreciado por la escuela de Grothendieck. Por
+ejemplo, aunque eran conscientes de la estructura cartesiana cerrada de los
+topos (\pend{[GV, IV 10]}), nunca explotaron al máximo esta idea siguiendo las líneas
+marcadas por Eilenberg y Kelly \pend{[160]}. Fue, por lo tanto, necesario que una
+segunda línea de desarrollo proveyera el ímpetu para la teoría elemental de
+topos.
+
+El punto de partida de esta segunda línea se considera generalmente que es el
+artículo pionero de F. W. Lawvere de 1964 sobre la teoría elemental de la
+categoría de conjuntos \pend{[71]}. Sin embargo, considero que es necesario ir
+un poco más atrás, a la demostración del teorema del encaje de Lubkin, Heron
+Freyd y Mitchell para categorías abelianas \pend{[AC]}. Fue este teorema el
+cual, mostrando que hay un conjunto explícito de axiomas elementales que
+implican todas las propiedades de exactitud (finitas) de categorías de módulos,
+pavimento el camino para un verdadero desarrollo autónomo de la teoría de
+categorías como fundamento de las matemáticas.
+
+(Casualmente el teorema del encaje de Freyd y Mitchell se considera
+frecuentemente como una culminación en lugar de un punto de partida; esto es
+porque me parece una mala interpretación (o al menos una inversión) de su
+verdadero significado. Comunmente se piensa que dice \enquote{si quieres
+demostrar algo acerca de una categoría abeliana, puedes asumir que es una
+categoría de módulos}; mientras que yo creo que su verdadera importancia es
+\enquote{si quieres demostrar algo acerca de categoría de módulos, puedes
+trabajar en una categoría abeliana en general} ---el teorema del encaje asegura
+que tu resultado será válido en esta generalidad, y olvidando la estructura
+explícita de la categoría de módulos serás forzado a concentrarte en los
+aspectos esenciales del problema---. Como ejemplo, compara la demostración
+módulo teórica del lema de la serpiente en \pend{HA} con la demostración en
+categorías abelianas en \pend{CW})
