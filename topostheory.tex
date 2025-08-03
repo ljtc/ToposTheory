@@ -6,7 +6,7 @@
 \usepackage[style=mexican]{csquotes}
 \usepackage[tracking=true,protrusion=true]{microtype}
 
-\usepackage[colorlinks]{hyperref}
+\usepackage[colorlinks, allcolors=blue!50!violet]{hyperref}
 
 %bibliografía
 \addbibresource{tt.bib}
@@ -39,15 +39,35 @@
       \pgfmathreturn0.259em % línea de base
     \endgroup}% 
 
+%notación que se usa en el libro
+\input{notacion}
+
 %para recordar pendientes
 \newcommand{\pend}[1]{{\color{red!70}#1}}
+
+\setcounter{chapter}{-1}
 
 \begin{document}
 \frontmatter
 \tableofcontents*
+\include{pre/prefacio}
+\include{pre/introduccion}
+\include{pre/notas}
 
 \mainmatter
-\include{introduccion}
+\include{capitulos/cap0}
+\include{capitulos/cap1}
+\include{capitulos/cap2}
+\include{capitulos/cap3}
+\include{capitulos/cap4}
+\include{capitulos/cap5}
+\include{capitulos/cap6}
+\include{capitulos/cap7}
+\include{capitulos/cap8}
+\include{capitulos/cap9}
+
+\appendix
+\include{post/ap}
 
 \backmatter
 %Impresión de glosarios

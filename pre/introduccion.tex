@@ -1,5 +1,6 @@
-\chapter{Introducción}
+\chapter*{Introducción}
 \label{chap:intro}
+\addcontentsline{toc}{chapter}{Introducción}
 
 La teoría de topos tiene sus orígenes en dos líneas separadas del desarrollo
 matemático, las cuales permanecieron separadas durante diez años. Para tener una
@@ -90,4 +91,74 @@ que tu resultado será válido en esta generalidad, y olvidando la estructura
 explícita de la categoría de módulos serás forzado a concentrarte en los
 aspectos esenciales del problema---. Como ejemplo, compara la demostración
 módulo teórica del lema de la serpiente en \pend{HA} con la demostración en
-categorías abelianas en \pend{CW})
+categorías abelianas en \pend{[CW]}.)
+
+Este teorema pronto fue seguido por el artículo de Lawvere \pend{[71]},
+estableciendo una lista de axiomas elementales los cuales, agregando los axiomas
+no elementales de completud y pequeñez local, son suficientes para caracterizar
+a la categoría de conjuntos. (En un artículo subsecuente \pend{[72]}, Lawvere
+provee una axiomatización similar para la categoría de categorías pequeñas, y D.
+Schlomiuk \pend{[105]} hizo lo mismo para la categoría de espacios topológicos.)
+
+Uno bien puede preguntar por qué este artículo no fue seguido inmediatamente por
+la explosión de actividad que supuso la introducción de los topos elementales
+seis años después. En retrospectiva, la respuesta es que los axiomas de Lawvere
+son demasiado especializados: la categoría de conjuntos es un objeto
+extremadamente útil como fundamento de las matemáticas, pero como objeto de
+estudio axiomático no es (¡\textit{ritmo} de la actividad de Martin, Solovay, et.
+al!) tremendamente interesante ---es demasiado \enquote{rígida} como para tener
+una estructura interna---. De manera similar, si los axiomas de categorías
+abelianas hubieran aplicado sólo a la categoría de grupos abelianos, y no a la
+categoría de módulos o a la de gavillas abelianas, ellos también habrían sido
+rechazados. Así, lo que se necesitaba para la categoría de conjuntos era una
+axiomatización que también cubriera a las categorías de functores con valores en
+conjuntos y categorías de gavillas con valores en conjuntos ---es decir, los
+axiomas de topos elementales---.
+
+En sus artículos subsecuentes (\pend{[73] y [75]}), Lawvere comienza a
+investigar la idea de que el conjunto con dos elementos \(\set{\true, \false}\)
+puede ser visto como un \enquote{objeto de valores de verdad} en la categoría de
+conjuntos; en particular, observó que la presencia de tal objeto en una
+categoría arbitraria nos permite reducir al axioma de comprensión a un enunciado
+elemental acerca de funtores adjuntos. La misma idea es el corazón del trabajo
+de H. Volger (\pend{[125] y [126]}) sobre lógica y categorías semánticas.
+
+Mientras tanto, el lado del teorema del encaje de esto fue desarrollado por M.
+Barr \pend{[2]}, quien formuló la  noción de \emph{categoría exacta} y la usó
+como base para un teorema de encaje no aditivo. La noción cercanamente
+relacionada de \emph{categoría regular} fue formulada independientemente por P.
+A. Grillet \pend{[41]} y D. H. Van Osdol \pend{[122]}, quienes la usaron en sus
+investigaciones sobre teoría general de gavillas; el mismo Barr obsrevó que el
+teorema de Giraud puede ser visto como algo más que un caso especial de este
+teorema de encaje. Esto quizás represente (lógicamente, si no cronológicamente)
+el primer acercamiento de las dos líneas de desarrollo mencionadas antes.
+
+Sin embargo, cerca del mismo tiempo la atención de Lawvere dió un giro hacia los
+topos de Grothendieck; él observó que todo topos de Grothendieck tiene un objeto
+de valores de verdad \(\Omega\), y que la noción de topología de Grothendieck
+está cercanamente conectada con endomorfismos de \(\Omega\) (ver \pend{[LH]}).
+Durante los años 1969--70, Lawvere y M. Tierney (quien antes había contribuido a
+la teoría de categorías exactas) comenzaron a investigar las consecuencias de
+tomar \enquote{existe un objeto de valores de verdad} como un axioma; el
+resultado fue la teoría elemental de topos. Una proporsión notablemente grande
+de la teoría básica fue desarrollada en ese período de 12 meses, como se hará
+evidente del gran número de teoremas en los capítulos 1--4 de este libro en cuya
+demostración se hará referencia a Lawvere y Tierney. 
+
+Una vez que estos teoremas fueron conocidos por los matemáticos en general (es
+decir, después de las lecturas de Lawvere en Zürich y Niece \pend{[LN]} en el
+verano de 1970 y la conferencia en Dalhousie \pend{[LH]} en enero de 1971),
+fueron inmediatamente aceptados y desarrollados por varias personas. Uno de los
+primeros y más importantes fue P. Freyd, cuyas lecturas en University of New
+South Wales \pend{[FK]} exploraron la teoría de encajes de topos; en
+retrospectiva esto parece haber sido algo como un callejón sin salida, de que la
+inversión del metateorema usual, mencionado arriba respecto a categorías
+abelianas, aplica con incluso más fuerza en la teoría de topos ---ya que la gran
+virtud de los axiomas de topos es su carácter elemental, uno no tiene que apelar
+a un teorema de encaje no elemental para demostrar hechos elementales acerca de
+topos. (El teorema de encaje de Freyd no será encontrado en este libro; pero la
+parte más importante (y elemental) de él que muestra que todo topos puede ser
+encajado en un topos booleano, es demostrado en \autoref{sec:7.5}). No obstante,
+el trabajo de Freyd contiene muchos resultados técnicos importantes; en
+particular su teorema de caracterización de objetos de números naturales es de
+suma importancia.
