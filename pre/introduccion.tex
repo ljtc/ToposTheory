@@ -1,5 +1,5 @@
 \chapter*{Introducción}
-\label{chap:intro}
+\label{cap:intro}
 \addcontentsline{toc}{chapter}{Introducción}
 
 La teoría de topos tiene sus orígenes en dos líneas separadas del desarrollo
@@ -158,7 +158,252 @@ virtud de los axiomas de topos es su carácter elemental, uno no tiene que apela
 a un teorema de encaje no elemental para demostrar hechos elementales acerca de
 topos. (El teorema de encaje de Freyd no será encontrado en este libro; pero la
 parte más importante (y elemental) de él que muestra que todo topos puede ser
-encajado en un topos booleano, es demostrado en \autoref{sec:7.5}). No obstante,
+encajado en un topos booleano, es demostrado en~\ref{sec:7.5}). No obstante,
 el trabajo de Freyd contiene muchos resultados técnicos importantes; en
 particular su teorema de caracterización de objetos de números naturales es de
 suma importancia.
+
+Entre otros primeros trabajadores en teoría de topos, uno debe mencionar a J.
+Bénabou y su estudiante J. Celeyrette en París \pend{[BC]}, y A. Kock y G. C.
+Wraith en Arhaus \pend{[KW]}. C. J. Mikkelsen, un estudiante de Kock, fue el
+primero en demostrar que uno de los axiomas de Lawvere y Tierney, el de
+colímites finitos, se puede deducir de los otros; su tesis \pend{[84]} también
+tiene muchas contribuciones importantes a la teoría de retículas en un topos.
+
+En vista de la demostración de Lawvere y Tierney de la independencia de la
+hipótesis del continuo \pend{[117]} se volvió un asunto importante determinar de
+manera precisa la relación entre la teoría de topos elemental y la teoría de
+conjuntos. La respuesta fue encontrada independientemente por J. C. Cole
+\pend{[18]}, W. Mitchell \pend{[85]} y G. Osius \pend{[92]}. W. Mitchell también
+introdujo una idea que se ha vuelto central en el tema: que en todo topos surge
+un lenguaje interno que puede ser usado para hacer enunciados \enquote{casi
+conjuntistas} acerca de los objetos y morfismos del topos. Aunque la idea
+original se debe a Mitchell, su defensor más entusiasta ha sido indudablemente
+J. Bénabou, sus estudiantes han usado extensivamente el lenguaje interno en años
+recientes.
+
+El siguiente avance importante fue hecho por R. Diaconescu, un estudiante de
+Tierney cuya tesis fue completada en 1973. El teorema de Diaconescu \pend{[30]}
+fue importante no sólo que le dió a la estructura de \(2\)-categoría a \(\cattop\)
+sino porque también representó el primer uso importante de la teoría de
+categorías interna. (Esta teoría se ha desarrollado a lo largo de los años de
+manera azarosa, mayormente en trabajo no publicado de J. Bénabou.) Como bis,
+Diaconescu demostró el teorema de Giraud relativo; el mismo Giraud \pend{[39]}
+había demostrado una versión relativa de su teorema (por medios no elementales)
+para topos de Grothendieck, y W. Mitchell formuló la forma elementalmente
+correcta. Sin embargo, Mitchell sólo pudo demostrar esto en el caso especial
+cuando el \enquote{objeto de generadores} (ver~\ref{4.43}) es \(1\); resultó que
+el teorema de Diaconescu fue la herramienta esencial para demostrar el caso
+general. Cerca del mismo tiempo, P. T. Johnstone \pend{[52]} también usó
+categorías internas para demostrar que la construcción de Grothendieck del
+funtor gavilla asociada se puede hacer en términos elementales.
+
+El siguiente desarrollo (que de hecho se solapa con los anteriores) fue el
+surgimiento de la noción de topos como teorías y el concepto de topos
+clasificante. En cierto sentido, esto regresa al trabajo de Lawvere \pend{[176]}
+sobre teorías algebraicas, pero su conexión con teoría de topos inició con el
+trabajo de M. Hakim \pend{[45]}, una estudiante de Grothendieck, sobre esquemas
+relativos  en el cual construyó el clasificador para anillos y anillos locales,
+y estableció sus propiedades fundamentales. En 1972 A. Joyal y G. E. Reyes
+\pend{[RM]} aislaron la noción de \enquote{teoría coherente} (= teoría
+geométrica finitaria, en nuestra terminología), y demostraron que toda teoría de
+ese tipo tiene un topos clasificante; su trabajo fue extendido después por Reyes
+y M. Makkai \pend{[82]} cubriendo teorías geométricas infinitarias.
+
+Fue F. W. Lawvere \pend{[LB]} quien observó primero que, dado el trabajo de
+Reyes y Joyal, el teorema de Deligne sobre puntos de topos coherentes era
+precisamente equivalente al teorema de completud de Gödel y Henkin para teorías
+geométricas finitarias; y también Lawvere conjeturó el \enquote{teorema de
+completud booleano valuado} para teorías infinitarias cuya demostración en
+teoría de topos fue hecha por M. Barr \pend{[4]}.
+
+Una vez más, el teorema de Diaconescu proveyó la clave para la
+\enquote{relativización} de los resultados de Joyal y Reyes; el paso decisivo
+fue dado en 1973 por G. C. Wraith, quien construyó un objeto clasificador sobre
+un topos arbitrario con objeto de números naturales. De ahí el teorema general
+de existencia de topos clasificantes era poco más que una formalidad; fue
+logrado independientemente por A. Joyal, M. Tierney \pend{[119]} y J. Bénabou
+\pend{[8]}.
+
+Esto pone al día nuestro viaje histórico, al menos en lo que concierne a los
+resultados más importantes. Ahora consideremos la posición presente de la teoría
+de topos, y sus perspectivas futuras.
+
+La primera cosa que debe ser dicha es que la parte básica de la topos
+elementales (es decir, el contenido de los capítulos 1--5 de este libro) parece
+estar completamente terminada. De hecho, sólo sé de una pregunta abierta
+sustancial que surge de estos cinco capítulos (a saber, la existencia de pseudo
+colímites finitos en \(\cattop\) vistos en la sección~\ref{sec:4.2}); sin duda
+hay muchos otros puntos menores que deben ser clarificados, y muchos teoremas
+cuyas demostraciones serán mejoradas y simplificadas con el tiempo, pero los
+fundamentos del tema parecen estar firmemente establecidos. Esto es por supuesto
+algo malo: es vital para la salud de un tema su continua revisión y
+mejoramiento, y estoy incómodamente consiente de que escribiendo este libro he
+contribuido mayormente  a la concretación de estos fundamentos. Mi una defensa
+en contra de este cargo es que de cualquier forma la solidificación está
+sucediendo, y es mejor que sea impresa que en folklore no publicado accesible
+sólo a iniciados.
+
+El matemático promedio, quien considera la teoría de categorías como
+\enquote{abstracción sin sentido generalizada}, tiende a considerar la teoría de
+topos teoría de categorías abstracta generalizada. (No hay duda de que ha
+heredado esta reputación de su padre, la aproximación de Grothendieck a la
+geometría algenraica.) Sin embargo S. Mac~Lane \pend{[179]} considera el
+surgimiento de la teoría de topos como un \textit{decline} de abstracción en
+teoría de categorías, y en álgebra abstracta en general. Estoy convencido de que
+Mac~Lane eta en lo correcto, y de que su visión señala el camino al futuro más
+probable del desarrollo de la teoría de topos; en casi todo el trabajo
+\textit{reciente} de importancia en teoría de topos no conciernen a los topos
+como un área abstracta y asilada de las matemáticas, sino a los topos como ayuda
+al entendimiento y clarificación de los conceptos en otras áreas. (ver, por
+ejemplo, \pend{[36], [57], [63], [79], [88], [90], [112], [130]}.)
+
+Para tomar un ejemplo específico considera el teorema general de existencia de
+topos clasificantes (\ref{6.56}). Una primera reacción al ver este teorema es
+admirar su elegancia y generalidad; la segunda reacción (la cual viene mucho
+tiempo después) es darse cuenta de su fundamental inutilidad ---una cualidad
+que, por cierto, comparte con el teorema general del funtor adjunto---. Ya que
+el único posible uso de tal teorema es reducir el estudio de una teoría
+geométrica particular al estudio de su modelo genérico (o a la inversa, reducir
+el estudio de un topos particular a la teoría del modelo genérico que tiene), y
+el teorema como es demostrado en la sección~\ref{sec:6.5} simplemente no provee
+un medio efectivo para pasar de una a la otra. Por tanto la demostración
+\enquote{sintáctica} del mismo teorema en la sección~\ref{sec:7.4}, aunque es
+apreciablemente más desordenada, es más valiosa en la práctica ---y es esta
+demostración, no la otra en el capítulo anterior, la que mayoría del trabajo
+siguiente en el tema.
+
+Al decir que el futuro de la teoría de topos recae en la clarificaciónde otras
+áreas de las matemáticas a través de la aplicación de las ideas de teoría de
+topos, no quiero implicar que, como Grothendieck, veo a la teoría de topos como
+una máquina de demolición de problemas abiertos en geometría algebraica o en
+cualquier otro lado. Por el contrario, creo que es poco probable que la teoría
+de topos elemental por sí misma resuelva algún problema mayor en matemáticas,
+pero creo que la dispersión de la perspectiva de la teoría de topos en muchas
+áreas de actividad matemática inevitablemente llevará a un entendimiento más
+profundo de las características reales de los problemas, el cual es un preludio
+esencial para su correcta solución.
+
+¿Cuál es, entonces, la perspectiva de la teoría de topos? Brevemente, consiste
+en el rechazo de la idea de que hay un universo fijo de conjuntos
+\enquote{constantes} dentro del cual las matemáticas pueden y deben ser
+desarrolladas, y el reconocimiento de que la noción de \enquote{estructura
+variable} puede ser manejada más convenientemente en un universo de conjuntos
+\emph{continuamente variables} que por el método, tradicional desde el
+surgimiento de la teoría de conjuntos abstracta, de considerar separadamente un
+dominio de variación (es decir, un espacio topológico) y una sucesión de
+estructuras constantes adjuntadas a los puntos de su dominio. En palabras de F.
+W. Lawvere \pend{[LB]}, \enquote{Toda noción de constancia es relativa, siendo
+derivada perceptual o conceptualmente como un caso límite de variación y el
+indiscutido valor de tales nociones para aclarar variación siempre está limitado
+por su origen. Esto aplica en particular a la noción de conjunto constante, y
+explica por qué gran parte de la teoría intuitiva de conjuntos lleva de alguna
+forma a la teoría de conjuntos variables}. Es esta generalización de la ideas
+desde conjuntos constantes a variables la que cae en el corazón de la teoría de
+topos; y el lector que lo mantiene en mente, como objetivo último, mientras lee
+este libro, ganará una gran comprensión.
+
+Ahora, algunas palabras acerca de aquellas cosas que no hice en este libro.
+
+(1) En la definición de topos, he tomado cartesiana cerrada y la existencia de
+\(\Omega\) como dos axiomas separados, en lugar de combinarlos un un sólo axioma
+de objetos potencia como sugiere A. Kock \pend{[66]}. (La equivalencia del
+axioma de Kock esta, sin embargo, cubierta en los ejercicios del
+capítulo~\ref{cap:1}.) A un nivel práctico defendería esta decisión por dos
+lados: (a) que hay un gran número de resultados en el libro (significativamente
+en el capítulo~\ref{cap:2}) que usan sólo la estructura cartesiana cerrada y no
+los axiomas completos de topos, y algunos (por ejemplo, el teorema~\ref{1.47})
+donde las exponenciales y \(\Omega\) son usados de formas esencialmente
+distintas en la misma demostración; y (b) que si uno toma la definición con
+objetos potencia, se ve obligado (como en\pend{[WB]}) a continuar inmediatamente
+con la demostración un tanto técnica de que esta definición implica ser
+cartesiana cerrada, y se pone en peligro de perder a los lectores en este punto
+crítico. En un nivel más filosófico, añadiría (c) que la definición mediante
+objetos potencia es realmente teórico conjuntista en lugar de una definición
+teórico categórica de topos, en el sentido que subordina la noción de
+\enquote{función} a la de \enquote{subconjunto} mediante el aparato teórico
+conjuntista de identificar funciones con sus gráficas. Una de las principales
+propiedades de la teoría de categorías es que toma \enquote{morfismo} como
+noción primitiva al mismo nivel (\emph{no}, por cierto, superior a) que
+\enquote{objeto}; por lo tanto es correcto que la definición de topos deba
+incluir la estructura cartesiana cerrada.
+
+(2) No he introducido el lenguaje de Mitchell y Bénabou hasta que el libro está
+algo avanzado, al final del capítulo~\ref{cap:5}. Sé que hay algunas personas
+cuyo libro de texto ideal sobre teoría de topos empezaría con la definición y
+sólo suficientes desarrollos de propiedades de exactitud para introducir el
+lenguaje la correctud de su interpretación; a partir de entonces todas las
+demostraciones se conducirían con el lenguaje formal. No estoy de acuerdo con
+este enfoque; creo que es imposible apreciar la potencia del lenguaje de
+Mitchell y Bénabou hasta que tengas algo de experiencia demostrando cosas sin él
+(de hecho, este es técnicamente el único lugar en el libro donde he seguido
+conscientemente un orden particular del material por razones pedagógicas en
+lugar de lógicas). También está el punto de que la aproximación con el lenguaje
+formal se rompe cuando se confronta con el teorema de Giraud relativo
+(\ref{4.46}); mientras que el lenguaje de Mitchell y Bénabou es una herramienta
+bastante poderosa en demostraciones en un sólo topos, no está bien adaptada a
+demostraciones en las cuales tenemos que pasar hacia adelante y hacia atrás
+entre dos topos mediante un morfismo geométrico. (Es posible que la demostración
+de~\ref{4.46} pueda hacerse más corta usando el lenguaje de categorías localmente
+internas, pero eso es un asunto diferente.)
+
+(3) Ya he mencionado que el teorema de encaje de Freyd \pend{[FK]} no será
+encontrado en este libro. En consecuencia, el concepto de Freyd de topos bien
+punteado juega un rol menor; no es introducido hasta la sección~\ref{9.3}.
+
+(4) No he incluido ninguna referencia al trabajo más reciente de Freyd (no
+publicado aún) sobre la teoría de \emph{alegorías}. Esta teoría hace para la
+categoría de conjuntos y relaciones lo que los topos hacen para conjuntos y
+funciones; es sabido que Freyd  mantiene que esto provee una base más simple y
+natural que la teoría de topos para muchas de las ideas desarrolladas en este
+libro, pero personalmente no estoy convencido de esto.
+
+(5) No he mencionado el trabajo hecho por D. Bourn \pend{[13]}, R. Street
+\pend{[113], [114]} y otros, sobre el desarrollo de un análogo \(2\)-categórico de
+la teoría de topos. Me parece que los fundamentos de esta teoría no han
+alcanzado un estado suficientemente definitivo para su tratamiento en forma de
+libro.
+
+(6) Una generalización de la teoría de topos cuya omisión me hace arrepentirme
+un poco es la noción de J. Penon de \emph{quasitopos} \pend{[99]}. Sin embargo,
+siento que introducirla al principio este libro simplemente habría introducido
+complicaciones extra en las demostraciones sin beneficios en la forma de
+ejemplos adicionales bien conocidos; e introducirla más adelante habría
+involucrado una gran cantidad de duplicación. Espero, sin embargo, que las notas
+O. Wyler sobre quasitopos (prometidas en \pend{[130]}) ayuden a llenar esta
+grieta.
+
+(7) La frase \enquote{universo de Grothendieck} no aparece en ningún lugar de
+este libro. Esto es intencional; he sido deliberadamente tan vago como sea
+posible (excepto en la sección~\ref{sec:9.3}) acerca de las propiedades de la
+teoría de conjuntos que estoy usando, ya que realmente no importa. La teoría de
+topos es una teoría elemental, y sus teoremas principales no son ---o no deben
+ser--- dependientes de axiomas recónditos de la teoría de conjuntos. (De hecho
+soy miembro con todas las cuotas pagadas del Movimiento de Liberación Matemática
+fundado por J. H. Conway \pend{[157]}.) Sin embargo, si soy presionado usaría un
+tipo de teoría de conjuntos de Bernays y Gödel para tener una distinción entre
+categorías pequeñas (conjuntos) y categorías grandes (clases propias); pero
+también quiero considerar ciertas \(2\)-categorías \enquote{muy grandes}
+(sustancialmente \(\catcat\) y \(\cattop\)) cuyos objetos son categorías
+grandes. Si quisiera ser estrictamente formal acerca de esto, necesitaría
+introducir al menos un universo de Grothendieck; pero como todos los enunciados
+que quiero hacer acerca de \(\catcat\) y \(\cattop\) son (equivalentes a)
+enunciados elementales, no hay necesidad \textit{real} de hacerlo. Con el fin de
+mantener cierta respetabilidad en el ámbito de la teoría de conjuntos, me he
+limitado a considerar gavillas sólo sobre sitios pequeños; esto tiene la
+desventaja de que no podemos enunciar el teorema de Giraud en su forma más hábil
+(una categoría es un topos de Grothendieck si y sólo si es equivalente a la
+categoría de gavillas canónicas sobre sí mismo), pero por lo demás no es tan
+molesto como los autores de \pend{[GV]} quieren hacernos creer.
+
+Finalmente, tengo que exponer mi postura sobre la pregunta más controversial en
+toda la teoría de topos: ¿como decir el plural de topos? El lector ya habrá
+observado que uso el plural del inglés;\footnote{En esta traducción se ha usado
+el plural que se ha convenido en español, topos.} lo hago porque (en sentido
+matemático) la palabra topos no se deriva directamente de su raíz griega, sino
+que es una formación en reversa de topología. No tengo nada más que decir al
+respecto, excepto preguntar a aquellos topósofos\footnote{Estoy en deuda con
+Miles Reid por sugerir los términos \enquote{topósofos} y \enquote{toposofía}; e
+insisto a mis colegas topósofos que los adopten.} quienes prefieren decir topoi,
+cuando ellos van a divagar en un día frío, ¿llevan provisiones de té caliente
+con ellos en termoi?

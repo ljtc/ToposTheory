@@ -1,7 +1,7 @@
 \documentclass[11pt]{memoir}
 \usepackage[spanish, mexico, es-noindentfirst]{babel}
 \usepackage{mycats}
-\usepackage[predefined={parent=chapter}]{keytheorems}
+\usepackage[predefined={parent=section}]{keytheorems}
 \usepackage[style=authoryear,giveninits=true]{biblatex}
 \usepackage[style=mexican]{csquotes}
 \usepackage[tracking=true,protrusion=true]{microtype}
@@ -9,7 +9,7 @@
 \usepackage[colorlinks, allcolors=blue!50!violet]{hyperref}
 
 %bibliografía
-\addbibresource{tt.bib}
+%\addbibresource{tt.bib}
 
 %glosarios
 \let\printindex\relax
@@ -46,6 +46,8 @@
 \newcommand{\pend}[1]{{\color{red!70}#1}}
 
 \setcounter{chapter}{-1}
+
+\includeonly{pre/notas}
 
 \begin{document}
 \frontmatter
