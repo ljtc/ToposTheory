@@ -1,13 +1,14 @@
 %Aquí se pondrán los comandos para la notación del libro topos theory
 
 %Introducción
-\newcommand*{\cattop}{\symfrak{Top}}        %categoría de topos
-\newcommand*{\catcat}{\symfrak{Cat}}        %categoría de categorías
-\newcommand*{\betop}{\symfrak{BTop}/\toposE}%topos acotados sobre E
+\newcommand*{\cattop}{\symfrak{Top}}            %categoría de topos
+\newcommand*{\catcat}{\symfrak{Cat}}            %categoría de categorías
+\newcommand*{\betop}{\symfrak{BTop}/\toposE}    %topos acotados sobre E
 
 %Capítulo 0
-\newcommand*{\gy}{h}                        %funtor de Yoneda Grothendieck
-\defset{\symfrak}{twocat#1}{A,B,C,D}        %2-categorías
-\defset{\symbb}{mon#1}{A,B,C,D,E,F,G,H}     %mónadas
-\NewDocumentCommand{\talg}{ m m }{#1^{#2}}  %álgebras
-\NewDocumentCommand{\coalg}{ m m }{#1_{#2}} %coálgebras
+\newcommand*{\gy}{h}                            %funtor de Yoneda Grothendieck
+\defset{\symfrak}{twocat#1}{A,B,C,D}            %2-categorías
+\defset{\symbb}{mon#1}{A,B,C,D,E,F,G,H}         %mónadas
+\NewDocumentCommand{\talg}{ m m }{#1^{#2}}      %álgebras
+\NewDocumentCommand{\coalg}{ m m }{#1_{#2}}     %coálgebras
+\renewcommand*{\con}{\toposS}                   %categoría de conjuntos

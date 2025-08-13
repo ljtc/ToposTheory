@@ -4,6 +4,69 @@
 \section{Teoría de categorías}
 \label{sec:0.1}
 
+Esta sección no tiene la intención de dar una introducción detallada a las ideas
+básicas de la teoría de categorías; nuestra intensión más bien es indicar
+algunos de los conceptos y teoremas que serán asumidos como familiares, y
+establecer algunas nociones estándar. El lector que no se considere familiarizado
+con estos conceptos básicos será bien aconsejado a consultar el excelente libro
+de Mac~Lane \pend{[CW]}, o cualquier otro texto estándar sobre teoría de
+categorías antes de proceder más adelante con este libro.
+
+Normalmente usaremos letras mayúsculas en script 
+(\(\lcatC\), \(\lcatD\), \(\lcatE\),\dots) para denotar categorías
+\enquote{grandes}. Cuando afirmemos \enquote{\(\lcatC\) es una categoría} sin
+ningún calificativo adicional, se entenderá que \(\lcatC\) es un modelo de la
+\enquote{teoría elemental de categorías} \pend{[72]}, es decir, \(\lcatC\) es
+una \emph{metacategoría} en el sentido de \pend{[CW], capítulo I}. Esto
+significa que no pensamos a \(\lcatC\) siendo formalmente definida dentro de un
+modelo particular de la teoría de conjuntos; en particular, si \(X\) y \(Y\) son
+objetos de \(\lcatC\) no pedimos que los morfismos de \(X\) a \(Y\) en
+\(\lcatC\) formen un conjunto.
+
+Sin embargo, a excepción del capítulo~\ref{cap:9}, normalmente asumiremos que
+tenemos un modelo (fijo) de la teoría de conjuntos (incluyendo el axioma de
+elección cuando sea necesario); y usaremos la letra \(\con\) para denotar la
+\emph{categoría de conjuntos y funciones} que obtenemos de él. Usamos el término
+\emph{categoría pequeña} para una categoría cuyos morfismos forman un conjunto.
+Si \(\catC\) es una categoría pequeña, escribimos \(\pge{\catC}\) para la
+categoría de \emph{pregavillas} sobre \(\catC\), es decir, funtores
+contravariantes de \(\catC\) en \(\con\); entre los objetos de \(\pge{\catC}\),
+tenemos los funtores \emph{representables} \(\gy_U\), donde \(U\) es un objeto
+de \(\catC\), definido como \(\gy_U(V)=\hom_{\catC}(V,U)\). (Por razones
+tipográficas, a veces escribiremos \(\gy(U)\) en lugar de \(\gy_U\); además
+escribiremos \(\gy^U\) para el funtor covariante representable
+\(\hom_{\catC}(U,-)\).) Frecuentemente haremos uso de los siguientes dos
+resultados:
+
+\begin{lemma}[label={0.11},note={Yoneda \pend{[187]}},short-note={Yoneda}]
+  Dados \(U\) y \(X\) objetos de \(\catC\) y \(\pge{\catC}\) respectivamente,
+  hay una biyección (natural en las dos variables) entre morfismos \(\gy_U\to X\)
+  en \(\pge{\catC}\) y elementos del conjunto \(X(U)\).
+\end{lemma}
+
+\begin{lemma}
+  Cualquier objeto de \(\pge{\catC}\) se puede expresar como un colímite de un
+  diagrama cuyos vértices son funtores representables.
+\end{lemma}
+\begin{proof}
+  Sea \(X\) un objeto de \(\pge{\catC}\), y sea \((\comma{\catC,X})\) la
+  \emph{categoría coma} (pequeña) cuyos objetos son pares \(U,\alpha\), con
+  \(U\) un objeto de \(\catC\) y \(\alpha\colon\gy_U \to X\) en \(\pge{\catC}\),
+  y cuyos morfismos son triángulos conmutativos
+  \begin{equation*}
+    \begin{tikzcd}
+      \gy_U \ar{rr}\ar{rd} && \gy_V\ar{ld} \\
+      & X
+    \end{tikzcd}
+  \end{equation*}
+  en \(\pge{\catC}\).
+
+  Así, tenemos un diagrama obvio \((\comma{\catC,X})\to\pge{\catC}\) obvio que
+  \enquote{olvida} dado por \((U,\alpha)\mapsto\gy_U\); se puede ver que el
+  colímite de este diagrama es \(X\).
+\end{proof}
+
+
 \section{Teoría de gavillas}
 \label{sec:0.2}
 

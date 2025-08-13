@@ -30,6 +30,8 @@
 %fuentes
 \setmainfont{Stix Two Text}
 \setmathfont{Stix Two Math}
+\setmathfont{Stix Two Math}[range=scr,StylisticSet=1]
+\setmathfont{Erewhon Math}[range=\mscrS]
 
 %punta de las flechas
 \tikzcdset{arrow style=math font}
@@ -47,12 +49,12 @@
 
 \setcounter{chapter}{-1}
 
-\includeonly{pre/notas}
+%\includeonly{pre/notas}
 
 \begin{document}
 \frontmatter
-\tableofcontents*
 \include{pre/prefacio}
+\tableofcontents*
 \include{pre/introduccion}
 \include{pre/notas}
 
