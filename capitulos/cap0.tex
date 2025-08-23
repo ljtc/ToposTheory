@@ -66,6 +66,178 @@ resultados:
   colímite de este diagrama es \(X\).
 \end{proof}
 
+Suponemos que el lector está familiarizado con las nociones de \emph{límite},
+\emph{colímite} y \emph{funtores adjuntos}. (Usamos la notación \(T\dashv G\)
+para \enquote{\(T\) es adjunto izquierdo de \(G\)}.) Aquí una advertencia:
+cuando decimos que una categoría \emph{tiene límites} de un tipo particular
+queremos decir que hay, para un diagrama del tipo apropiado, una elección
+\emph{canónica} del límite. Por ejemplo, cuando decimos que \(\con\) tiene
+productos binarios queremos decir que, dados dos conjuntos \(X\) y \(Y\), existe
+bo sólo un conjunto cuyoe elementos están en biyección con los pares ordenados
+\(\fami{x,y}\), sino un conjunto canónico, a saber el conjunto de todos los
+pares ordenados. Sin embargo, cuando decimos que un funtor \emph{preserva
+límites} no significa que preserva la elección canónica de los límites; y el
+enunciado un objeto es \emph{un} límite de cierto diagrama no implica que es el
+canónico.
+
+Si una categoría \(\lcatC\) tiene objeto terminal (es decir, un límite para el
+diagrama vacío) lo denotamos con \(1\); y si \(X\) es un objeto de \(\lcatC\),
+también usamos \(X\) para denotar el único morfismo \(X\to 1\), y \(\id_X\) (o
+simplemente \(\id\)) para el morfismo identidad en \(X\). (La confusión heredada
+de esta notación puede ser justificada de manera imprecisa por el hecho de que
+\(\id_X\) es el objeto terminal de la categoría \(\slice{\lcatC,X}\) de
+\emph{objetos sobre} \(X\) y que si \(f\colon Y \to X\) es un objeto en esta
+categoría, entonces \(f\) es también el único morfismo en \(\slice{\lcatC,X}\)
+de \(f\) a \(\id_{1_X}\).) Si \(\lcatC\) tiene productos y/o productos fibrados,
+usamos la letra \(\pi\) para denotar la proyección canónica de un producto o un
+producto fibrado a uno de sus factores, con subíndice \(1\), \(2\),
+\(3\),{\ldots} para denotar al primer, segundo, tercer,{\dots} factor. De manera
+similar, usaremos comúnmente (pero no exclusivamente) la letra \(v\), con un
+subíndice apropiado, para denotar la inclusión de un factor en un coproducto.
+
+También asumimos familiaridad con la noción de \emph{mónada} (o triple),
+\emph{comónada} y de álgebras sobre una \emph{mónada}. Haremos uso del
+\enquote{teorema crudo de monacidad} de Beck \pend{[153]} es su forma de
+\enquote{coigualador reflexivo}; recordar que un par paralelo 
+\(f,g\colon X\to Y\) en una categoría \(\lcatC\) es \emph{reflexivo} si existe
+\(h\colon Y\to X\) tal que \(hf = hg = \id_Y\). (En el caso \(\lcatC=\con\), esto
+es equivalente a decir que la imagen de \((f,g)\colon X\to Y\times Y\) es una
+relación reflexiva sobre \(Y\).)
+
+\begin{theorem}[label=0.13]
+  Sean \(F\colon\lcatC\to\lcatA\) y \(U\colon\lcatA\to\lcatC\) un par de
+  funtores tales que \(F\dashv U\) y sea \(\monH\) la mónada sobre \(\lcatC\)
+  inducida por esta adjunción. Supongamos que \(\lcatA\) tiene coigualadores de
+  pares reflexivos, que \(U\) los preserva y que \(U\) refleja isomorfismos.
+  Entonces \(U\) es monádico, es decir, el functor de comparación 
+  \(K\colon\lcatA\to\talg{\lcatC}{\monH}\) es una equivalencia de categorías,
+  donde \(\talg{\lcatC}{\monH}\) denota la categoría de \(\monH\)-álgebras.
+\end{theorem}
+
+También haremos uso de los siguientes teoremas acerca de categorías de álgebras:
+
+\begin{theorem}[label=0.14,note={Eilenberg-Moore \pend{[162]}},
+  short-note={Eilenberg-Moore}]
+  Sea \(\monH=(H,\eta,\mu)\) una mónada sobre \(\lcatC\) y supongamos que \(H\)
+  tiene adjunto derecho \(G\). Entonces existe una única estructura de comónada
+  \(\monG=(G,\varepsilon,\delta)\) sobre \(G\) tal que la categoría 
+  \(\coalg{\lcatC}{\monG}\) de \(\monG\)-coálgebras es isomorfa a
+  \(talg{\lcatC}{\monH}\), con un isomorfismo que identifica a los dos funtores
+  que olvidan.  
+\end{theorem}
+
+\begin{theorem}[label=0.15, 
+  note={\enquote{teorema de levantamiento de adjuntos}, ver \pend{[54]}},
+  short-note={levantamiento de adjuntos}]
+  Sean \(\monH\) y \(\monK\) mónadas sobre categorías \(\lcatC\) y \(\lcatD\)
+  respectivamente, \(T\colon\lcatC\to\lcatD\) un funtor y 
+  \(\overline{T}\colon\talg{\lcatC}{\monH}\to\talg{\lcatD}{\monK}\) un funtor que es
+  el \enquote{levantamiento} de \(T\) en el sentido que el cuadrado
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement = \&]
+      \talg{\lcatC}{\monH} \ar{r}{\overline{T}}\ar{d}[swap]{U} \&
+      \talg{\lcatD}{\monK} \ar{d}{U} \\
+      \lcatC \ar{r}[swap]{T} \& \lcatD
+    \end{tikzcd}
+  \end{equation*}
+  conmuta, donde los \(U\) denotan a los funtores que olvidan. Supongamos
+  también que \(\talg{\lcatC}{\monH}\) tiene coigualadores de pares reflexivos.
+  Si \(T\) tiene adjunto izquierdo, entonces también lo tiene \(\overline{T}\).
+\end{theorem}
+
+\begin{theorem}[label=0.16, note={Linton \pend{[178]}}, short-note={Linton}]
+  Sea \(\monH\) una mónada sobre una categoría \(\lcatC\) y supongamos que
+  \(\talg{\lcatC}{\monH}\) tiene coigualadores de pares reflexivos. Si
+  \(\lcatC\) tiene coproductos finitos (\(\con\)-indexados,
+  respectivamente), entonces \(\talg{\lcatC}{\monH}\) tiene colímites finitos
+  (\(\con\)-indexados, respectivamente).
+\end{theorem}
+
+Es claro de los teoremas \ref{0.13}, \ref{0.15} y \ref{0.16} que los
+coigualadores de pares reflexivos (\enquote{coigualadores reflexivos}) juegan un
+papel importante en la teoría de mónadas. Por lo tanto, es apropiado dar en este
+punto un lema el cual, a pesar de ser capaz de una aplicación muy amplia (como
+veremos en el capítulo~\ref{cap:6}), no ha encontrado su camino hacia los textos
+estándar sobre teoría de categorías.
+
+\begin{lemma}[label=0.17]
+  Sea
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement = \&, column sep=large]
+      X_1 \ar[shift left]{r}{f_1}\ar[shift right]{r}[swap]{f_2}
+          \ar[shift left]{d}{\alpha_2}\ar[shift right]{d}[swap]{\alpha_1} \&
+      X_2 \ar{r}{f_3}
+          \ar[shift left]{d}{\beta_2}\ar[shift right]{d}[swap]{\beta_1} \&
+      X_3 \ar[shift left]{d}{\gamma_2}\ar[shift right]{d}[swap]{\gamma_1} \\
+      Y_1 \ar[shift left]{r}{g_1}\ar[shift right]{r}[swap]{g_2}
+          \ar{d}{\alpha_3} \&
+      Y_2 \ar{r}{g_3} \ar{d}{\beta_3} \&
+      Y_3 \ar{d}{\gamma_3} \\
+      Z_1 \ar[shift left]{r}{h_1}\ar[shift right]{r}[swap]{h_2} \&
+      Z_2 \ar{r}{h_3} \& Z_3
+    \end{tikzcd}
+  \end{equation*}
+  un diagrama que satisface las condiciones \enquote{obvias} de conmutatividad en
+  cualquier categoría (es decir, \(\beta_i f_j = g_j \alpha_i\) con \(i=1,2\),
+  \(j=1,2\), etc.), en el que los renglones y columnas son coigualadores y los
+  pares \((f_1,f_2)\) y \((\alpha_1,\alpha_2)\) son reflexivos. Entonces la
+  diagonal
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement = \&, column sep=large]
+      X_1 \ar[shift left]{r}{\beta_1 f_1}\ar[shift right]{r}[swap]{\beta_2 f_2} \&
+      Y_2 \ar{r}{\gamma_3 g_3} \& Z_3
+    \end{tikzcd}
+  \end{equation*}
+  es un coigualador.
+\end{lemma}
+\begin{proof}
+  Primero notamos que
+  \begin{align*}
+    \gamma_3 & = \coig(\gamma_1, \gamma_2)\\
+             & = \coig(\gamma_1 f_3, \gamma_2 f_3) && \text{pues \(f_3\) es epi}\\
+             & = \coig(g_3 \beta_1, g_3 \beta_2).
+  \end{align*}
+  Así, el cuadrado de abajo a la derecha es un coproducto fibrado; es decir, un
+  morfismo \(\theta\colon Y_2\to T\) se factoriza a través de 
+  \(\gamma_3 g_3\colon Y_2\to Z_3\) si y sólo si coiguala a \((g_1, g_2)\) y
+  \((\beta_1,\beta_2)\). Si esa condición se satisface, entonces
+  \(\theta\beta_1f_1=\theta\beta_2f_1=\theta g_1\alpha_2=\theta g_2\alpha_2
+  =\theta\beta_2f_2\). Viceversa, si \(\theta\beta_1f_1=\theta\beta_2f_2\) y 
+  \(s\colon X_2\to X_1\) es una escisión común para \(f_1\) y \(f_2\), entonces
+  \(\theta\beta_1=\theta\beta_1f_1s=\theta\beta_2f_2s=\theta\beta_2\); y de
+  manera similar \(\theta g_1=\theta g_2\). Así que \(Y_2\to Z_3\) es un
+  coigualador de \(\beta_1 f_1\) y \(\beta_2 f_2\).
+\end{proof}
+
+\begin{comentario}
+  No es necesario para la demostración que el cuadrado de abajo a la izquierda
+  sea un coproducto fibrado. Si ya tenemos que un morfismo 
+  \(\theta\colon Y_2\to T\) se factoriza a través de 
+  \(\gamma_3 g_3\colon Y_2\to Z_3\) si y sólo si coiguala a \((g_1, g_2)\) y
+  \((\beta_1,\beta_2)\),
+  entonces se puede ver que \(\gamma_3g_3\) es un coigualador a partir de todas
+  las conmutatividades y la escisión:
+  \begin{equation*}
+    \begin{tikzcd}[ampersand replacement = \&]
+      X_1\ar[shift left]{r}{f_1}\ar[shift right]{r}[swap]{f_2} \&
+      X_2 \ar[shift left]{r}{\beta_1}\ar[shift right]{r}[swap]{\beta_2} \&
+      Y_2 \ar{r}{g_3}\ar{rrd}[swap]{\theta} \& Y_3\ar{r}{\gamma_3} \& Z_3 \\
+      \& \& \& \& T\mathrlap{.}
+    \end{tikzcd}
+  \end{equation*}
+  Si suponemos que \(\theta\colon Y_2\to T\) coiguala a lo que debe, entonces de
+  la escisión común \(s\colon X_2\to X_1\) para \(f_1\) y \(f_2\) se deduce que
+  \(\theta\beta_1=\theta\beta_2\). De manera similar, usando la escisión común
+  \(t\colon Y_1\to X_1\) de \(\alpha_1\) y \(\alpha_2\) se deduce que
+  \(\theta g_1=\theta g_2\). Por lo que estamos suponiendo se tiene que
+  \(\theta\) se factoriza a través de \(\gamma_3 g_3\). La unicidad se sigue de
+  que \(g_3\) y \(\gamma_3\) son epis.
+
+  También se puede demostrar que la condición implica que el cuadrado de abajo a
+  la derecha es un coproducto fibrado. Además, la condición se sigue de que
+  \(g_3\) y \(\gamma_3\) son coigualadores.
+\end{comentario}
+
 
 \section{Teoría de gavillas}
 \label{sec:0.2}

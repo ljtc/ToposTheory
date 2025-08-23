@@ -5,6 +5,7 @@
 \usepackage[style=authoryear,giveninits=true]{biblatex}
 \usepackage[style=mexican]{csquotes}
 \usepackage[tracking=true,protrusion=true]{microtype}
+\usepackage{comment}
 
 \usepackage[colorlinks, allcolors=blue!50!violet]{hyperref}
 
@@ -41,6 +42,28 @@
       \pgfmathreturn0.259em % línea de base
     \endgroup}% 
 
+%comentarios que se activan con una etiqueta
+\newif\ifshow%
+\showtrue%cambiar a false para que desaparezcan los addendum
+%comentario
+\newcounter{com}
+\ifshow%
+\NewDocumentEnvironment{comentario}{+b}
+  {% begin code
+    \par\color{blue!60}\sffamily\noindent
+    \refstepcounter{com}%
+    \textbf{Comentario \thecom.}%
+    \par\noindent\ignorespaces%
+    #1
+  }
+  {% end code
+    \par%
+    \noindent\ignorespacesafterend%
+  }
+\else
+\excludecomment{addendum}
+\fi
+
 %notación que se usa en el libro
 \input{notacion}
 
@@ -49,9 +72,10 @@
 
 \setcounter{chapter}{-1}
 
-%\includeonly{pre/notas}
+\includeonly{capitulos/cap0}
 
 \begin{document}
+
 \frontmatter
 \include{pre/prefacio}
 \tableofcontents*
